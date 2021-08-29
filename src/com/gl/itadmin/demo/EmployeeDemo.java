@@ -18,6 +18,8 @@ public class EmployeeDemo {
 		String firstName = sc.next();
 		System.out.println("Please Enter your LastName");
 		String lastName = sc.next();
+		System.out.println("Enter password length");
+		int length = sc.nextInt();
 		System.out.println("Please enter the department from the following:");
 		System.out.println("1. Technical \n2. Admin \n3. HR \n4. Legal");
 		int depId = sc.nextInt();
@@ -37,14 +39,10 @@ public class EmployeeDemo {
 			break;
 		
 		}
-		Employee emp = new Employee(firstName, lastName, department);
-		System.out.println(emp);		
+		Employee emp = new Employee(firstName, lastName, department);		
 		emp.setEmailId(empSvc.generateEmail(emp));
-		System.out.println("Email Id is generated");
-		System.out.println(emp);
-		emp.setPassword(empSvc.generatePassword());
-		System.out.println("password is generated");
-		System.out.println(emp);
+		emp.setPassword(empSvc.generatePassword(length));
+		System.out.println(">>>>>Please find your Credentials below<<<<<<");
 		System.out.println(emp.showCredentials());		
 	}
 

@@ -49,7 +49,7 @@ public class Employee {
 		this.password = password;
 	}
 	public String showCredentials() {
-		return "Your generated Email Id is - "+this.getEmailId()+"\n Password is - "+this.getPassword();
+		return "Email Id is -> "+this.getEmailId()+"\nPassword is -> "+this.getPassword();
 	}
 	
 
